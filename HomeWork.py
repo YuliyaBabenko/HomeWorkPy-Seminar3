@@ -14,14 +14,43 @@ X = int(input('Введите искомое число: '))
 
 import random
 
-A = []
-for i in range(0, N):
-    A.append(random.randint(1, N/2))
-print(A)
+# A = []
+# for i in range(0, N):
+#     A.append(random.randint(1, N/2))
+# print(A)
 
-count = 0
-i = 0
-for e in A:
-    if e == X:
-        count += 1
-print(count)
+# count = 0
+# i = 0
+# for e in A:
+#     if e == X:
+#         count += 1
+# print(count)
+
+# Задача 18:
+# Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X. 
+# Пользователь вводит натуральное число N – количество элементов в массиве и число, которое необходимо
+# проверить - X.
+# Заполните массив случайными натуральными числами от 1 до N.
+# Выведите, ближайший к X элемент. Если есть несколько элементов, которые равноудалены от X, выведите
+# наименьший по величине.
+# Ввод: 10
+# Ввод: 7 
+# 1 2 1 8 9 6 5 4 3 4
+# Вывод: 6
+
+Massive = []
+for i in range(0, N):
+    Massive.append(random.randint(1, N))
+print(Massive)
+
+for e in Massive:
+    if X == e:
+        print(e)
+        break
+    else:
+        if X - e == 1:
+            print(e)
+            break
+        elif X - e == 2:
+            print(e)
+            break
